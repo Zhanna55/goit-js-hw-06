@@ -14,11 +14,11 @@ const images = [
 ];
 const listEl = document.querySelector('.gallery');
 
-for (const image of images) {
+images.forEach((image) => {
   const imgEl = document.createElement('img');
   imgEl.src = image.url;
   imgEl.alt = image.alt;
 
   const markup = `<li><img src=${imgEl.src} alt=${imgEl.alt}></li>`;
   listEl.insertAdjacentHTML('afterbegin', markup);
-}
+});
